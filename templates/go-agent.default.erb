@@ -1,0 +1,7 @@
+export JAVA_HOME="$(readlink -f $(type -p java) | sed -e 's@/bin/java@@')"
+export GO_SERVER_SSL_PORT="<%= scope['::gocd::agent::server_ssl_port'] %>"
+export GO_SERVER_PORT="<%= scope['::gocd::agent::server_port'] %>"
+export GO_SERVER="<%= scope['::gocd::agent::server'] %>"
+export AGENT_WORK_DIR="/var/lib/go-agent"
+export DAEMON=Y
+export VNC=N
