@@ -1,0 +1,72 @@
+{
+  "name": "jmkeyes-gocd",
+  "version": "0.0.1",
+  "author": "jmkeyes",
+  "summary": "Module for managing ThoughtWorks GoCD.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/jmkeyes/puppet-gocd",
+  "project_page": "https://github.com/jmkeyes/puppet-gocd",
+  "issues_url": "https://github.com/jmkeyes/puppet-gocd/issues",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.7.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7.0",
+        "8.0"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.6.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/firewall",
+      "version_requirement": ">= 1.7.0 < 2.0.0"
+    },
+    {
+      "name": "puppetlabs/concat",
+      "version_requirement": ">= 1.2.0 < 2.0.0"
+    },
+    {
+      "name": "puppetlabs/java_ks",
+      "version_requirement": ">= 1.3.0 < 2.0.0"
+    },
+    {
+      "name": "puppetlabs/java",
+      "version_requirement": ">= 1.4.0 < 2.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 2.1.0 < 3.0.0"
+    }
+  ]
+}
