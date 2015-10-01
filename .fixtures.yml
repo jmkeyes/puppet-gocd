@@ -1,0 +1,22 @@
+fixtures:
+  symlinks:
+    gocd: "#{source_dir}"
+  forge_modules:
+    apt:
+      repo: 'puppetlabs/apt'
+      ref:  '2.2.0'
+    concat:
+      repo: 'puppetlabs/concat'
+      ref:  '1.2.4'
+    stdlib:
+      repo: 'puppetlabs/stdlib'
+      ref:  '4.9.0'
+    firewall:
+      repo: 'puppetlabs/firewall'
+      ref:  '1.7.1'
+    java_ks:
+      repo: 'puppetlabs/java_ks'
+      ref:  '1.2.1'
+    java:
+      repo: 'puppetlabs/java'
+      ref:  '1.4.1'

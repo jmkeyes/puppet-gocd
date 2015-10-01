@@ -1,3 +1,9 @@
 require 'puppetlabs_spec_helper/rake_tasks'
-require 'puppet-lint/tasks/puppet-lint'
-require 'puppet_blacksmith/rake_tasks'
+
+begin
+  require 'puppet_blacksmith/rake_tasks'
+rescue LoadError
+  # Don't load blacksmith tasks in test.
+end
+
+task :test => [:lint, :validate, :spec]
