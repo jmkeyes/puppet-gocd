@@ -17,9 +17,36 @@ This is a Puppet Module to deploy and manage the ThoughtWorks GoCD server and ag
 
 ## Description
 
+This module contains two main classes:
+
+  * `gocd::server` (GoCD Server)
+  * `gocd::agent` (GoCD Agent)
+
 ## Configuration
 
+### GoCD Server
+
+To get up and running quickly with default settings, use `include '::gocd::server'`.
+
+The defaults should set up a GoCD Server according to the setup guide.
+
+Review the `gocd::server` class for options.
+
+### GoCD Agent
+
+To get a build agent up and running, provide the `server` parameter:
+
+```
+class { '::gocd::agent':
+  server => 'gocd-server.example.net',
+}
+```
+
+The deployed build agent will connect to `gocd-server.example.net` automatically.
+
 ## Examples
+
+There are no examples to show yet.
 
 ## Todo
 
