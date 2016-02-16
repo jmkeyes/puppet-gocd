@@ -16,6 +16,6 @@ define gocd::server::user (
 
   concat::fragment { "/var/lib/go-server/passwd:${name}":
     target  => '/var/lib/go-server/passwd',
-    content => "${name}:${password}",
+    content => "${name}:${password}\n",
   }
 }
