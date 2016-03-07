@@ -51,7 +51,6 @@ There are no examples to show yet.
 ## Todo
 
   * Windows/Solaris/OSX platforms and ZIP-based installation.
-  * GoCD Server plugin installation and management.
   * GoCD Server configuration via API if possible.
   * GoCD Server artifact directory management.
   * Fully support GoCD Agent auto-registration.

@@ -1,34 +1,26 @@
 # == Define: gocd::server::plugin
 
 define gocd::server::plugin (
-  $url,
+  $source,
 ) {
-
-  # wget from https://github.com/maestrodev/puppet-wget
-  include wget
-
   validate_string($name)
-  validate_string($url)
+  validate_string($source)
 
   $name_regex = '^[a-z0-9_-]{3,32}$'
   $name_error = "The plugin name '${name}' is not valid."
-
-
   validate_re($name, $name_regex, $name_error)
 
-  $download_dir = '/tmp'
+  archive { "/var/lib/go-server/plugins/external/${name}.jar":
+    ensure  => present,
+    source  => $source,
+    extract => false,
+  } ->
 
-
-  $tmpzip = "${download_dir}/${name}.zip"
-
-  wget::fetch { "s3-plugin-dl-${name}":
-        source      => $url,
-        destination => $tmpzip,
-  }  ->
-  file { $name:
-    ensure => file,
-    path   => "/var/lib/go-server/plugins/external/${name}.jar",
-    source => $tmpzip,
+  file { "/var/lib/go-server/plugins/external/${name}.jar":
+    ensure => present,
     notify => Service[$::gocd::server::service_name],
+    mode   => '0644',
+    owner  => 'go',
+    group  => 'go',
   }
 }
