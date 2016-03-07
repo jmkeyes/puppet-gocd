@@ -1,7 +1,7 @@
 # == Define: gocd::server::plugin
 
 define gocd::server::plugin (
-  $url = undef,
+  $url,
 ) {
 
   # wget from https://github.com/maestrodev/puppet-wget
