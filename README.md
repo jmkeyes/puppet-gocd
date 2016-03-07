@@ -9,7 +9,8 @@
  2. [Description](#description)
  3. [Configuration](#configuration)
  4. [Examples](#examples)
- 3. [Todo](#todo)
+ 5. [Todo](#todo)
+ 6. [Contributors](#contributors)
 
 ## Overview
 
@@ -54,3 +55,9 @@ There are no examples to show yet.
   * GoCD Server configuration via API if possible.
   * GoCD Server artifact directory management.
   * Fully support GoCD Agent auto-registration.
+
+## Contributors
+
+Thanks to the following people who have contributed to this module!
+
+  * [Vlad Korolev](https://github.com/vladistan)
