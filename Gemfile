@@ -6,6 +6,8 @@ group :test do
   gem 'rspec-core',             :require => false
   gem 'rspec-puppet',           :require => false
   gem 'puppetlabs_spec_helper', :require => false
+  gem 'json_pure', '<2.0.2'
+  gem 'json', '<2.0.0'
 end
 
 group :development do
