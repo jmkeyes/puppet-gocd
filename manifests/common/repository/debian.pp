@@ -17,8 +17,8 @@
 
 class gocd::common::repository::debian (
   $comment     = 'ThoughtWorks GoCD APT Repository',
-  $fingerprint = '9A439A18CBD07C3FF81BCE759149B0A6173454C7',
-  $location    = 'http://dl.bintray.com/gocd/gocd-deb/',
+  $fingerprint = '322259C82D3082B3E32AEC2ED8843F288816C449',
+  $location    = 'https://download.go.cd/',
   $keyserver   = 'pgp.mit.edu',
 ) {
   apt::key { 'thoughtworks-gocd':
