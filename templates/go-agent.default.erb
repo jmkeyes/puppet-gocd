@@ -5,3 +5,5 @@ export GO_SERVER="<%= scope['::gocd::agent::server'] %>"
 export AGENT_WORK_DIR="/var/lib/go-agent"
 export DAEMON=Y
 export VNC=N
+export AGENT_MEM="<%= scope['::gocd::agent::min_memory'] %>"
+export AGENT_MAX_MEM="<%= scope['::gocd::agent::max_memory'] %>"

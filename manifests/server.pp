@@ -26,6 +26,8 @@ class gocd::server (
   $manage_firewall = true,
   $listen_port     = 8153,
   $listen_port_ssl = 8154,
+  $min_memory      = '512m',
+  $max_memory      = '1024m',
   $ssl_certificate = undef,
   $ssl_private_key = undef,
   $ssl_ca_cert     = undef,
