@@ -1,6 +1,6 @@
 {
   "name": "jmkeyes-gocd",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "jmkeyes",
   "summary": "Module for managing ThoughtWorks GoCD.",
   "license": "Apache-2.0",
