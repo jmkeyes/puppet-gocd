@@ -26,8 +26,8 @@ class gocd::agent (
   $manage_package  = true,
   $server_ssl_port = 8154,
   $server_port     = 8153,
-  $jvm_min_memory  = '512m',
-  $jvm_max_memory  = '1024m',
+  $jvm_min_memory  = undef,
+  $jvm_max_memory  = undef,
 ) {
   # Fail fast if we're not using a new Puppet version.
   if versioncmp($::puppetversion, '3.7.0') < 0 {

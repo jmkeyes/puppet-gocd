@@ -3,5 +3,9 @@ export GO_SERVER_SSL_PORT="<%= scope['::gocd::server::listen_port_ssl'] %>"
 export GO_SERVER_PORT="<%= scope['::gocd::server::listen_port'] %>"
 export SERVER_WORK_DIR="/var/lib/go-server"
 export DAEMON=Y
+<%- if scope['::gocd::server::jvm_min_memory'] -%>
 export SERVER_MEM="<%= scope['::gocd::server::jvm_min_memory'] %>"
+<%- end -%>
+<%- if scope['::gocd::server::jvm_max_memory'] -%>
 export SERVER_MAX_MEM="<%= scope['::gocd::server::jvm_max_memory'] %>"
+<%- end -%>
