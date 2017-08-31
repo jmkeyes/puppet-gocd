@@ -21,7 +21,7 @@ class gocd::common::user (
   $home    = '/var/go',
   $comment = 'GoCD User',
 ) {
-  if $::gocd::common::manage_daemon_user {
+  if $::gocd::common::manage_user {
     user { $user:
       ensure  => present,
       comment => $comment,
