@@ -20,11 +20,15 @@ class gocd::server::config {
     fail("Use of private class ${name} from ${caller_module_name}")
   }
 
-  validate_string($::gocd::server::jvm_min_memory)
-  validate_string($::gocd::server::jvm_max_memory)
+  if $::gocd::server::jvm_min_memory != undef {
+    validate_string($::gocd::server::jvm_min_memory)
+    validate_re($::gocd::server::jvm_min_memory, '^\d+[KkGgMm]$')
+  }
 
-  validate_re($::gocd::server::jvm_min_memory, '^\d+[KkGgMm]$')
-  validate_re($::gocd::server::jvm_max_memory, '^\d+[KkGgMm]$')
+  if $::gocd::server::jvm_max_memory != undef {
+    validate_string($::gocd::server::jvm_max_memory)
+    validate_re($::gocd::server::jvm_max_memory, '^\d+[KkGgMm]$')
+  }
 
   file { '/etc/default/go-server':
     ensure  => present,
