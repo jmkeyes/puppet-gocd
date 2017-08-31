@@ -25,9 +25,9 @@ class gocd::common::repository::debian (
     ensure => present,
     id     => $fingerprint,
     server => $keyserver,
-  } ->
+  }
 
-  apt::source { 'thoughtworks-gocd':
+  -> apt::source { 'thoughtworks-gocd':
     location => $location,
     comment  => $comment,
     release  => '/',

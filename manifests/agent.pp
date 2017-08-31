@@ -39,8 +39,8 @@ class gocd::agent (
   contain '::gocd::agent::config'
   contain '::gocd::agent::service'
 
-  Class['::gocd::common'] ->
-  Class['::gocd::agent::install'] ->
-  Class['::gocd::agent::config'] ~>
-  Class['::gocd::agent::service']
+  Class['::gocd::common']
+  -> Class['::gocd::agent::install']
+  -> Class['::gocd::agent::config']
+  ~> Class['::gocd::agent::service']
 }

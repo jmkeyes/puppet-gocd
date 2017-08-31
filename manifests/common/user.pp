@@ -27,9 +27,9 @@ class gocd::common::user (
       comment => $comment,
       home    => $home,
       system  => true,
-    } ->
+    }
 
-    file { $home:
+    -> file { $home:
       ensure => directory,
       mode   => '0755',
       owner  => $user,

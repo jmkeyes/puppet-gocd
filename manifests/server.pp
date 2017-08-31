@@ -43,8 +43,8 @@ class gocd::server (
   contain '::gocd::server::config'
   contain '::gocd::server::service'
 
-  Class['::gocd::common'] ->
-  Class['::gocd::server::install'] ->
-  Class['::gocd::server::config'] ~>
-  Class['::gocd::server::service']
+  Class['::gocd::common']
+  -> Class['::gocd::server::install']
+  -> Class['::gocd::server::config']
+  ~> Class['::gocd::server::service']
 }

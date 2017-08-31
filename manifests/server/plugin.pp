@@ -29,9 +29,9 @@ define gocd::server::plugin (
     ensure  => present,
     source  => $source,
     extract => false,
-  } ->
+  }
 
-  file { "/var/lib/go-server/plugins/external/${name}.jar":
+  -> file { "/var/lib/go-server/plugins/external/${name}.jar":
     ensure => present,
     notify => Service[$::gocd::server::service_name],
     mode   => '0644',
